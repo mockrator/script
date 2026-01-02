@@ -30,6 +30,3 @@ jobs:
           pnpm --version  
       - name: Install dependencies using PNPM
         run: pnpm install --no-frozen-lockfile
-
-      - name: Build Packages
-        run: pnpm build
