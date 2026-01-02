@@ -1,0 +1,8 @@
+BRANCH="$(git rev-parse --abbrev-ref HEAD)"
+PROTECTED_BRANCHES="^(master|develop)"
+
+if [[ "$BRANCH" =~ $PROTECTED_BRANCHES ]]; then
+    echo "You can't push directly to master or develop branch"
+
+    exit 1
+fi
